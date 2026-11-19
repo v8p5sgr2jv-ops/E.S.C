@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ESC-000 帰還標識 | 株式会社環境安全管理機構</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .handwritten-svg {
+      filter: url(#paper-rough);
+    }
+    .secret-gate {
+      max-width: 480px;
+      margin: 2.5rem auto 0;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      background: var(--bg-alt);
+      text-align: left;
+    }
+    .secret-gate h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+    .compare-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">ESC</span>
+        <span>環境安全管理機構</span>
+      </a>
+      <nav class="nav">
+        <a href="about.html">企業概要</a>
+        <a href="standards.html">安全規格</a>
+        <a href="pictograms.html">ピクトグラム</a>
+        <a href="archive.html">資料庫</a>
+        <a href="reports.html">報告書</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Locked until reconstruction -->
+    <div id="locked-view">
+      <h1 class="section-title">未登録規格</h1>
+      <div class="notice">
+        このページは未登録の規格番号に対応しています。復元手続きが完了していない場合、内容は表示されません。
+      </div>
+      <p class="muted mt-2"><a href="internal.html">内部資料から復元を試みる</a></p>
+    </div>
+
+    <!-- TRUE END content -->
+    <div id="unlocked-view" class="hidden">
+      <div class="ending-screen">
+        <h1>ESC-000　帰還標識</h1>
+
+        <!-- Official SVG -->
+        <div style="margin:1.5rem auto;width:150px;">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+            <!-- Left figure facing us -->
+            <circle cx="32" cy="28" r="11" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+            <rect x="23" y="42" width="18" height="28" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+            <line x1="23" y1="52" x2="12" y2="68" stroke="#1a1a1a" stroke-width="2.5"/>
+            <line x1="41" y1="52" x2="48" y2="64" stroke="#1a1a1a" stroke-width="2.5"/>
+            <line x1="27" y1="70" x2="22" y2="90" stroke="#1a1a1a" stroke-width="2.5"/>
+            <line x1="37" y1="70" x2="42" y2="90" stroke="#1a1a1a" stroke-width="2.5"/>
+            <!-- Right figure turned away -->
+            <circle cx="70" cy="28" r="11" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+            <rect x="61" y="42" width="18" height="28" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+            <line x1="61" y1="52" x2="54" y2="64" stroke="#1a1a1a" stroke-width="2.5"/>
+            <line x1="79" y1="52" x2="88" y2="68" stroke="#1a1a1a" stroke-width="2.5"/>
+            <line x1="65" y1="70" x2="60" y2="90" stroke="#1a1a1a" stroke-width="2.5"/>
+            <line x1="75" y1="70" x2="80" y2="90" stroke="#1a1a1a" stroke-width="2.5"/>
+            <line x1="66" y1="24" x2="74" y2="24" stroke="#1a1a1a" stroke-width="2"/>
+          </svg>
+        </div>
+
+        <p class="mono">制定日：1998年11月17日</p>
+        <p class="mono">制定者：水野</p>
+        <p class="mono">適用条件：不明</p>
+        <p class="mono">使用実績：記録なし</p>
+
+        <div class="epilogue">
+          <p>机上の図面と、同日の音声以外に、制定経緯を示す文書はない。</p>
+          <p class="mt-2">図面の人物は二人。一方は正面、一方は背を向けている。</p>
+        </div>
+
+        <p class="mt-3 muted small">TRUE END — 帰還者</p>
+        <p class="mt-2"><a href="index.html" id="back-to-top">トップページへ戻る</a></p>
+      </div>
+
+      <!-- Secret gate: stricter conditions -->
+      <div class="secret-gate" id="secret-gate">
+        <h3>記録照合</h3>
+        <p class="small" style="margin-bottom:0.5rem;">
+         「誰のためのものでもないさ。」
+        </p>
+        <div class="puzzle-input">
+          <input type="text" id="secret-input" placeholder="例：……" maxlength="20" autocomplete="off">
+          <button type="button" onclick="trySecretUnlock()">照会</button>
+        </div>
+        <div class="puzzle-feedback" id="secret-feedback"></div>
+      </div>
+
+      <!-- SECRET END content (hidden until unlocked) -->
+      <div id="secret-section" class="hidden" style="margin-top:2.5rem;">
+        <div class="paper scan">
+          <div class="doc-header">
+            <h1>追加資料 — 手書き図形</h1>
+            <div class="doc-meta-line">出所：佐伯 個人保管箱　推定時期：2003年頃　正式登録なし</div>
+          </div>
+
+          <p>机の上に残されていた図面とは別に、佐伯の保管資料から手書きの紙片が発見された。</p>
+          <p class="mt-1">公式の ESC-000 とよく似ているが、同じものではない。</p>
+
+          <!-- Handwritten version: hands connected -->
+          <div style="margin:1.75rem auto;width:160px;text-align:center;">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+              <!-- slight irregularity to feel handwritten -->
+              <circle cx="30" cy="27" r="11" fill="none" stroke="#2a2a2a" stroke-width="2.2"/>
+              <rect x="21" y="40" width="18" height="27" fill="none" stroke="#2a2a2a" stroke-width="2.2"/>
+              <line x1="21" y1="50" x2="11" y2="66" stroke="#2a2a2a" stroke-width="2.2"/>
+              <!-- left arm extended toward center -->
+              <line x1="39" y1="50" x2="48" y2="54" stroke="#2a2a2a" stroke-width="2.2"/>
+              <line x1="25" y1="67" x2="20" y2="88" stroke="#2a2a2a" stroke-width="2.2"/>
+              <line x1="35" y1="67" x2="40" y2="88" stroke="#2a2a2a" stroke-width="2.2"/>
+
+              <circle cx="70" cy="27" r="11" fill="none" stroke="#2a2a2a" stroke-width="2.2"/>
+              <rect x="61" y="40" width="18" height="27" fill="none" stroke="#2a2a2a" stroke-width="2.2"/>
+              <!-- right arm extended toward center -->
+              <line x1="61" y1="50" x2="52" y2="54" stroke="#2a2a2a" stroke-width="2.2"/>
+              <line x1="79" y1="50" x2="88" y2="66" stroke="#2a2a2a" stroke-width="2.2"/>
+              <line x1="65" y1="67" x2="60" y2="88" stroke="#2a2a2a" stroke-width="2.2"/>
+              <line x1="75" y1="67" x2="80" y2="88" stroke="#2a2a2a" stroke-width="2.2"/>
+
+              <!-- connected hands (the key difference) -->
+              <line x1="48" y1="54" x2="52" y2="54" stroke="#2a2a2a" stroke-width="2.4"/>
+              <!-- small overlapping mark suggesting joined hands -->
+              <circle cx="50" cy="54" r="2.5" fill="none" stroke="#2a2a2a" stroke-width="1.6"/>
+            </svg>
+          </div>
+
+          <p class="compare-note">
+            規格番号なし。制定記録なし。
+          </p>
+
+          
+          </div>
+
+          <p class="mt-3 muted small" style="text-align:center;">SECRET END — 未完了</p>
+        </div>
+
+        <!-- Further quiet layer — only under deeper conditions -->
+        <div id="deeper-quiet" class="hidden" style="margin-top:2rem;">
+          <div class="paper scan" style="opacity:0.95;">
+            <div class="doc-header">
+              <h1 style="font-size:0.9rem;color:#555;">（追記）</h1>
+              <div class="doc-meta-line">日付なし　筆跡は佐伯のメモと一致しない</div>
+            </div>
+            <div class="handwritten" style="font-size:0.92rem;">
+              <p>繋がっていても、同じ場所にいるとは限らない。</p>
+              <p class="mt-2">離れていても、残されていることはある。</p>
+              <p class="mt-2">どちらが正しいか、ここでは決めない。</p>
+            </div>
+            <p class="muted small mt-2" style="text-align:right;">—</p>
+          </div>
+          <p class="text-center mt-2">
+            <button type="button" class="small" style="background:none;border:none;color:#888;cursor:pointer;font-size:0.8rem;" onclick="openDoc('fragment_note')">…</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Environmental Safety Control Corporation. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/documents.js"></script>
+  <script>
+    function canShowDeeper() {
+      // Secret reached + both supporting docs collected
+      return ESC.hasFlag('viewed_secret_end')
+        && ESC.hasDoc('audio_transcript')
+        && ESC.hasDoc('folklore01');
+    }
+
+    function showDeeperIfReady() {
+      const deeper = document.getElementById('deeper-quiet');
+      if (!deeper) return;
+      if (canShowDeeper()) {
+        deeper.classList.remove('hidden');
+        ESC.setFlag('deeper_layer');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (ESC.hasFlag('reconstructed_000')) {
+        document.getElementById('locked-view').classList.add('hidden');
+        document.getElementById('unlocked-view').classList.remove('hidden');
+        ESC.setFlag('viewed_true_end');
+
+        if (ESC.hasFlag('viewed_secret_end')) {
+          document.getElementById('secret-gate').classList.add('hidden');
+          document.getElementById('secret-section').classList.remove('hidden');
+        }
+
+        // Always re-check deeper on load (fixes "opened docs after secret" case)
+        showDeeperIfReady();
+      }
+    });
+
+    function trySecretUnlock() {
+      const input = document.getElementById('secret-input').value.trim();
+      const fb = document.getElementById('secret-feedback');
+
+      const hasLetter = ESC.hasFlag('found_saeki_letter') || ESC.hasDoc('saeki_letter');
+      const hasRoster = ESC.hasDoc('roster');
+
+      if (!hasLetter || !hasRoster) {
+        fb.className = 'puzzle-feedback ng';
+        fb.textContent = '必要な資料が不足しています。佐伯のメモと勤務関連資料を確認してください。';
+        return;
+      }
+
+      const ok = ESC.checkAnswer('secret_chair', input, [
+        '椅子', 'いす', 'イス', '一つ椅子', '椅子を置く', '空席', '空席を残す', '空いた椅子', '椅子一つ'
+      ]);
+
+      if (ok) {
+        fb.className = 'puzzle-feedback ok';
+        fb.textContent = '照会が許可されました。';
+        ESC.setFlag('viewed_secret_end');
+        document.getElementById('secret-gate').classList.add('hidden');
+        document.getElementById('secret-section').classList.remove('hidden');
+        document.getElementById('secret-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        showDeeperIfReady();
+      } else {
+        fb.className = 'puzzle-feedback ng';
+        fb.textContent = '一致する記録が見つかりません。';
+      }
+    }
+  </script>
+</body>
+</html>
