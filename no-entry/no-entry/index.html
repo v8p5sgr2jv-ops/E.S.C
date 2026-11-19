@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>株式会社環境安全管理機構 | E.S.C.</title>
+  <meta name="description" content="あらゆる環境において、人間の安全と生活の継続を保証する。施設安全管理・危険表示設計・事故調査分析。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">ESC</span>
+        <span>環境安全管理機構</span>
+      </a>
+      <nav class="nav">
+        <a href="about.html">企業概要</a>
+        <a href="standards.html">安全規格</a>
+        <a href="pictograms.html">ピクトグラム</a>
+        <a href="archive.html">資料庫</a>
+        <a href="reports.html">報告書</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <h1>株式会社環境安全管理機構</h1>
+      <p class="tagline">Environmental Safety Control Corporation</p>
+      <p>
+        あらゆる環境において、人間の安全と生活の継続を保証する。<br>
+        私たちは、工場・研究施設・地下設備・閉鎖施設における安全管理を専門とする民間企業です。
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">主要事業</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>施設安全管理</h3>
+          <p>稼働中および閉鎖済み施設の定期点検、危険箇所の特定と対策立案を行います。</p>
+        </div>
+        <div class="card">
+          <h3>危険表示の設計・製造</h3>
+          <p>独自規格ESPSに基づく安全標識の設計から製造・設置までを一貫して担当します。</p>
+        </div>
+        <div class="card">
+          <h3>事故調査・分析</h3>
+          <p>発生した事故の原因究明と再発防止策の策定を、記録に基づき実施します。</p>
+        </div>
+        <div class="card">
+          <h3>特殊環境安全対策</h3>
+          <p>通常の災害・事故では説明が困難な環境要因に対する対策を研究・提案します。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">お知らせ</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>日付</th>
+              <th>内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono">2026-03-12</td>
+              <td>ピクトグラムデータベースの一部更新を実施しました。<a href="pictograms.html">一覧を確認する</a></td>
+            </tr>
+            <tr>
+              <td class="mono">2025-11-08</td>
+              <td>過去資料の電子化プロジェクトが完了しました。<a href="archive.html">資料庫</a></td>
+            </tr>
+            <tr>
+              <td class="mono">2024-06-20</td>
+              <td>企業概要ページを改訂しました。</td>
+            </tr>
+            <tr id="update-log-row" class="hidden">
+              <td class="mono">1998-11-17</td>
+              <td>
+                ESC-000：帰還標識　制定者：水野　<span class="badge badge-ok">水野：確認済み</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted mt-1">最終更新：2026年3月12日</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">企業理念</h2>
+      <div class="notice">
+        「理解できないものがあっても、人は生きていかなければならない。<br>
+        そのために、私たちは規則を残す。」
+      </div>
+      <p class="muted small mt-2">— 創業以来の社内標語より</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Environmental Safety Control Corporation. All rights reserved.</p>
+    <p class="mt-1">本サイトは架空の企業によるARG作品です。実在の組織・個人・施設とは一切関係ありません。</p>
+    <p class="mt-1"><a href="#" onclick="ESC.resetProgress();return false;">進行状況をリセット</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const row = document.getElementById('update-log-row');
+      if (!row) return;
+
+      // Temporary appearance of "水野：確認済み"
+      // Shows only on the first visit to top after reconstruction, then disappears on reload.
+      if (ESC.hasFlag('reconstructed_000') && !ESC.hasFlag('mizuno_confirm_seen')) {
+        row.classList.remove('hidden');
+        ESC.setFlag('mizuno_confirm_seen');
+      } else {
+        row.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

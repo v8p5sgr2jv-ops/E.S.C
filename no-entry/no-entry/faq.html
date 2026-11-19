@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>よくある質問 | 株式会社環境安全管理機構</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">ESC</span>
+        <span>環境安全管理機構</span>
+      </a>
+      <nav class="nav">
+        <a href="about.html">企業概要</a>
+        <a href="standards.html">安全規格</a>
+        <a href="pictograms.html">ピクトグラム</a>
+        <a href="archive.html">資料庫</a>
+        <a href="reports.html">報告書</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="section-title">よくある質問</h1>
+
+    <div class="faq-item">
+      <div class="faq-q">E.S.C.はどのような企業ですか？ <span>＋</span></div>
+      <div class="faq-a">
+        工場、研究施設、地下設備、閉鎖施設などの安全管理を請け負う民間企業です。
+        危険表示の設計・製造、事故調査、特殊環境に関する安全対策も行っています。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">ESPSとは何ですか？ <span>＋</span></div>
+      <div class="faq-a">
+        E.S.C. Standard Pictogram Systemの略称です。1986年に制定された当社独自の安全標識体系で、
+        禁止・保護・警告・未分類の4分類からなります。詳細は「安全規格」および「ピクトグラム」ページをご覧ください。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">「未分類環境要因」とは何ですか？ <span>＋</span></div>
+      <div class="faq-a">
+        通常の事故・災害・人為的ミスでは説明が困難な、空間認識や人数認識に関わる事象を、社内で便宜的に呼ぶ際の用語です。
+        原因の特定には至っておらず、複数の仮説が並存しています。統一的な科学的定義は存在しません。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">標識を守れば安全ですか？ <span>＋</span></div>
+      <div class="faq-a">
+        標識は過去の経験則に基づく行動指針です。遵守によりリスクが低減される可能性はありますが、
+        すべての状況における絶対的な安全を保証するものではありません。
+        標識を守ったにもかかわらず行方不明となった事例、守らなかったにもかかわらず無事であった事例の両方が記録されています。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">第六管理区事故について教えてください。 <span>＋</span></div>
+      <div class="faq-a">
+        1998年11月17日、当社管理下の地下施設で発生した行方不明事案です。
+        公式見解では「未分類環境要因による一時的な認識混乱」とされています。
+        詳細な公開資料は報告書ページおよび資料庫を参照してください。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">ESC-000という番号の標識はありますか？ <span>＋</span></div>
+      <div class="faq-a">
+        公開データベースには登録されていません。未登録または制定プロセスが特殊な標識については、
+        通常の一覧に表示されない場合があります。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">このサイトは何ですか？ <span>＋</span></div>
+      <div class="faq-a">
+        本サイトは架空の企業「株式会社環境安全管理機構」を舞台とした、完全にフィクションのARG（代替現実ゲーム）作品です。
+        実在の企業・個人・施設・事件とは一切関係ありません。プレイヤーに実在の場所への訪問や、実在の人物への接触を求めることはありません。
+      </div>
+    </div>
+
+    <div class="faq-item hidden" id="quiet-faq">
+      <div class="faq-q">…… <span>＋</span></div>
+      <div class="faq-a">
+        残されているものと、残されなかったもののあいだに、はっきりした境界があるとは限りません。
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Environmental Safety Control Corporation. All rights reserved.</p>
+    <p class="mt-1">本サイトは架空のARG作品です。</p>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (ESC.hasFlag('deeper_layer')) {
+        const q = document.getElementById('quiet-faq');
+        if (q) q.classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

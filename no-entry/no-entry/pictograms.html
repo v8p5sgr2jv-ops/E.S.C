@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ピクトグラム一覧 | 株式会社環境安全管理機構</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">ESC</span>
+        <span>環境安全管理機構</span>
+      </a>
+      <nav class="nav">
+        <a href="about.html">企業概要</a>
+        <a href="standards.html">安全規格</a>
+        <a href="pictograms.html">ピクトグラム</a>
+        <a href="archive.html">資料庫</a>
+        <a href="reports.html">報告書</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="section-title">ピクトグラム一覧</h1>
+    <p class="muted mb-2">
+      ESPS規格に基づく安全標識の公開データです。クリックで詳細を表示します。
+      一部の標識は使用停止・未承認・未登録の状態にあります。
+    </p>
+
+    <div class="picto-grid" id="picto-grid">
+      <!-- cards injected by JS -->
+    </div>
+
+    <div class="detail-panel" id="detail-panel">
+      <div class="detail-header">
+        <div id="detail-svg"></div>
+        <div class="detail-meta">
+          <h2 id="detail-title">—</h2>
+          <ul class="meta-list" id="detail-meta"></ul>
+        </div>
+      </div>
+      <div id="detail-body"></div>
+    </div>
+
+    <section class="section mt-3" id="missing-notice" style="display:none;">
+      <div class="notice warn">
+        <strong>欠番について</strong><br>
+        公開一覧には ESC-■■■ および一部の番号が存在しません。
+        これらは「未登録」または「制定経緯が特殊」なため、通常のデータベースには含まれていません。
+        詳細は社内限定資料を参照してください。
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Environmental Safety Control Corporation. All rights reserved.</p>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/pictograms.js"></script>
+</body>
+</html>

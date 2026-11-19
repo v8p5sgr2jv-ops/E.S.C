@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>事故報告書 | 株式会社環境安全管理機構</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">ESC</span>
+        <span>環境安全管理機構</span>
+      </a>
+      <nav class="nav">
+        <a href="about.html">企業概要</a>
+        <a href="standards.html">安全規格</a>
+        <a href="pictograms.html">ピクトグラム</a>
+        <a href="archive.html">資料庫</a>
+        <a href="reports.html">報告書</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="section-title">事故報告書</h1>
+    <p class="muted mb-2">
+      公開可能な事故・事象の概要です。詳細な個人情報および未解明事案の一部は省略されています。
+    </p>
+
+    <div class="doc-list">
+      <div class="doc-item" onclick="openDoc('accident_summary')">
+        <div>
+          <div class="doc-title">第六管理区事故　概要報告書（抄）</div>
+          <div class="doc-meta">文書番号：AR-1998-061　1998年11月17日</div>
+        </div>
+        <span class="badge badge-warn">制限付き公開</span>
+      </div>
+
+      <div class="doc-item" onclick="openDoc('roster')">
+        <div>
+          <div class="doc-title">夜間勤務表・退勤記録　照合メモ</div>
+          <div class="doc-meta">文書番号：AR-1998-061-A</div>
+        </div>
+        <span class="badge">関連資料</span>
+      </div>
+
+      <div class="doc-item" onclick="openDoc('audio_transcript')">
+        <div>
+          <div class="doc-title">管理室 報告音声 書き起こし</div>
+          <div class="doc-meta">1998年11月17日　03時台</div>
+        </div>
+        <span class="badge">関連資料</span>
+      </div>
+    </div>
+
+    <section class="section mt-3">
+      <h2 class="section-title">公式見解</h2>
+      <div class="notice">
+        第六管理区における事案について、当社は「未分類環境要因による一時的な認識混乱」との見解を維持しています。
+        人的被害（行方不明）については、関係者への補償と再発防止手順の改定をもって対応を完了しています。
+      </div>
+      <p class="small muted mt-2">
+        ※ 一部の元職員からは、公式見解と異なる個人的所見が提出されていますが、会社としての採択は行っていません。
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="notice danger" id="bad-end-notice" style="display:none;">
+        <strong>最終確認結果</strong><br>
+        当該施設における事故発生人数：0名<br>
+        <span class="small">すべての記録は正常範囲内と判断されました。</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Environmental Safety Control Corporation. All rights reserved.</p>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/documents.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // If player somehow reaches bad end path
+      if (ESC.hasFlag('viewed_bad_end')) {
+        document.getElementById('bad-end-notice').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
